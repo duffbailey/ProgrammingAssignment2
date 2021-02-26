@@ -2,7 +2,11 @@
 ## functions do
 
 ## Write a short comment describing this function
-
+##  makeCacheMatrix first initializes the two global objects
+##  - x and i which are used to contain the matrix and its inverse
+##   It then defines the behavior of the 4 functions that 
+##  get and set the matrix and its inverse and returns 
+##  these functions in a list.
 makeCacheMatrix <- function(x = matrix()) {
 ##  set the value of the matrix
   i <- NULL
@@ -23,7 +27,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
+## cachesolve takes a matrix and uses the functions of 
+##  makeCacheMatrix to create and cache an inverse of a matrix OR 
+##  or simply retrive the cached version if it has already been created
 cachesolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   i <- x$getinverse()
